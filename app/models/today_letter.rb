@@ -1,0 +1,2 @@
+class TodayLetter < ApplicationRecord
+end
