@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :users
+  devise_for :users
   resources :letters
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :likes
+  get '/saved_letters', to: 'saved_letter#index'
+  get '/about', to: 'about#index'
   root 'timeline#index'
 end

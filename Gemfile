@@ -10,6 +10,8 @@ gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'devise'
+gem 'cancancan'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

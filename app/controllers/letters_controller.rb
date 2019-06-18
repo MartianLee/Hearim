@@ -5,6 +5,18 @@ class LettersController < ApplicationController
   # GET /letters.json
   def index
     @letters = Letter.all
+    @saved_letters = SavedLetter.find_by(id: current_user)
+    @likes = Like.all.find_by(id: current_user)
+    # @letters.each do |letter|
+    #   letter.liked = ''
+    # end
+    # if @letters and @likes
+    #   intersection = @letters.pluck(:id) & @likes.pluck(:id)
+    #   intersection.each do |id|
+    #     @letters.find(id).liked = true
+    #   end
+    # end
+
   end
 
   # GET /letters/1
@@ -25,6 +37,7 @@ class LettersController < ApplicationController
   # POST /letters.json
   def create
     @letter = Letter.new(letter_params)
+    @letter.user = current_user
 
     respond_to do |format|
       if @letter.save
@@ -69,6 +82,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:body)
+      params.require(:letter).permit(:body, :user_id)
     end
 end

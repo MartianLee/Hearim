@@ -7,18 +7,15 @@
       %th 상세보기
       %th User
       %th Function
-      %th
 
   %tbody
-    - @letters.each do |letter|
+    - @saved_letters.each do |letter|
       %tr
         %td= letter.body
         %td= link_to 'Show', letter
         %td= current_user.email
         %td= link_to 'Edit', edit_letter_path(letter)
-        %td= link_to 'Like', likes_path(letter: letter), method: :post
         %td= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } if can? :edit, letter
-        %td= letter.likes.pluck(:user_id).include?(current_user.id)
 
 %br
 
