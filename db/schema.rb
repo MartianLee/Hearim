@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_18_120416) do
+ActiveRecord::Schema.define(version: 2019_06_19_021901) do
 
   create_table "declarations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_120416) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
+    t.integer "like_count", default: 0
     t.index ["user_id"], name: "index_letters_on_user_id"
   end
 
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_120416) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "letter_id", null: false
+    t.index ["letter_id", "user_id"], name: "index_likes_on_letter_id_and_user_id", unique: true
     t.index ["letter_id"], name: "index_likes_on_letter_id"
     t.index ["user_id"], name: "index_likes_on_user_id"
   end

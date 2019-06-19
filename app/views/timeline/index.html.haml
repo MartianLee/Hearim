@@ -3,8 +3,10 @@
     %h1 Home#index
     %p 타임라인
     = link_to 'New Letter', new_letter_path
+    = link_to 'Saved Letter', saved_letters_path
+    = link_to 'Today\'s Letter', today_letters_path
     = link_to 'Letters List', letters_path
-    = link_to 'About', letters_path
+    = link_to 'About', about_path
     - if user_signed_in?
         = current_user.email
         = link_to 'Sign out', destroy_user_session_path, method: :delete

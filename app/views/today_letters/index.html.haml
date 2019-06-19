@@ -1,0 +1,19 @@
+%h1 Today's Letter !
+
+%table
+  %thead
+    %tr
+      %th Day
+      %th 내용
+      %th User
+
+  %tbody
+    - @today_letters.each do |letter|
+      %tr
+        %td= letter.created_at.strftime("%Y/%m/%d")
+        %td= letter.body
+        %td= letter.user_id
+%br
+
+= link_to 'New Today Letter', new_today_letter_path
+= link_to 'Home', root_path
