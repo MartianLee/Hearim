@@ -1,4 +1,6 @@
 class LikesController < ApplicationController
+    def index
+    end
     def create
         liked = Like.find_by(user_id: current_user.id, letter_id: params[:letter])
         if liked.present?

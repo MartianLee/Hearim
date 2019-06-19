@@ -1,0 +1,36 @@
+.navigation-bar {
+    padding: 33px;
+    background-color: #f8f1e3;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu {
+    position: fixed;
+    left: 33px;
+}
+
+.btn-menu {
+    width: 28px;
+}
+
+.btn-refresh {
+    width: 19px;
+}
+
+.name {
+    width: 100%;
+    text-align: center;
+    font-family: NanumMyeongjo;
+    font-size: 18px;
+    font-weight: 800;
+    color: #494d82;
+}
+
+.refresh {
+    position: fixed;
+    right: 33px;
+}

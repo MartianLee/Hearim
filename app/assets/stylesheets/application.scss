@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-color: #f8f1e3;
+    color: #333;
+    font-family: NanumMyeongjo, Nanumgothic;
+    font-size: 14px;
+    margin: 0;
+    line-height: 18px;
+    // letter-spacing: 1.3px;
+}
+
+
+.page-container {
+    margin: 117px 29px 29px 29px;
+    @media screen and (min-width: 768px) {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.menu-options {
+    line-height: 1.39;
+    margin-left: 35px;
+    a {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        text-align: justify;
+        color: #494d82;
+        margin-bottom: 9px
+    }
+}

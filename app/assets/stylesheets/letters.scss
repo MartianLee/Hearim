@@ -5,3 +5,86 @@ td {
     min-width: 30px;
     word-break: break-all;
 }
+
+.letter {
+    margin-bottom: 51px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.body {
+    background-color: #494d82;
+    border-radius: 10px;
+    color: #f8f1e3;
+    padding: 52px;
+    .text {
+        margin-top: 18px;
+        margin-bottom: 47px;
+    }
+}
+
+.img-wrapper {
+    width: 100%;
+}
+
+.img-letter-above {
+    width: 47px;
+    display: block;
+    margin: 8px auto 38px auto;
+}
+
+.to-me {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.93;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #f8f1e3;
+}
+
+.text {
+  letter-spacing: normal;
+  line-height: 1.79;
+  text-align: justify;
+}
+
+.from-me {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2.04;
+    letter-spacing: normal;
+    text-align: right;
+    color: #f8f1e3;
+}
+
+a.btn {
+    color: transparent;
+    &:visited{
+        background: transparent;
+    }
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 27px;
+
+    .btn-like {
+        width: 33px;
+    }
+    .btn-save {
+        width: 24px;
+    }
+    .btn-delete {
+        width: 32px;
+    }
+    .btn-share {
+        width: 28px;
+    }
+    .btn {
+        &:not(:first-child){
+            margin-left: 27.9px;
+        }
+    }
+}

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :saved_letters
   resources :today_letters
   get '/about', to: 'about#index'
+  get '/menu', to: 'timeline#index'
   root 'timeline#index'
 end
