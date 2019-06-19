@@ -15,6 +15,6 @@
     .btn-wrapper
       .actions
         - if devise_mapping.registerable? && controller_name != 'registrations'
-          = link_to "계정 만들기", new_registration_path(resource_name), class: "btn-signup"
+          = link_to "회원가입", new_registration_path(resource_name), class: "btn-signup"
         = f.submit "로그인", class: "btn-submit"
   -# = render "devise/shared/links"

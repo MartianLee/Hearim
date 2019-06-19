@@ -1,3 +1,6 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+ 
+body, table, div, p {font-family: 'Nanum Myeongjo';}
 
 body {
     background-color: #f8f1e3;
@@ -31,7 +34,7 @@ body {
         letter-spacing: normal;
         text-align: justify;
         color: #494d82;
-        margin-bottom: 9px
+        margin-bottom: 15px
     }
 }
 
@@ -42,7 +45,9 @@ body {
         color: #494d82;
         text-align: center;
     }
-
+    .field {
+        margin-bottom: 26px;
+    }
     .user-input {
         margin-top: 56px;
         background-color: #494d82;
@@ -70,16 +75,24 @@ body {
             &:-internal-autofill-selected {
                 background-color: #494d82 !important;
             }
-            &::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                color: #f8f1e3;
-            }
         }
-        .passward-warn {
-            font-size: 11px;
-        }
-        .new-password {
-            font-size: 11px;
-        }
+    }
+    input[type="password"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-family: NanumMyeongjo;
+        color: #f8f1e3 !important;
+        padding-left: 5px;
+    }
+    :-ms-input-placeholder {
+        color: #f8f1e3 !important;
+    }
+    ::-ms-input-placeholder {
+        color: #f8f1e3 !important;
+    }
+    .passward-warn {
+        font-size: 11px;
+    }
+    .new-password {
+        font-size: 11px;
     }
     .btn-wrapper {
         text-align: right;

@@ -9,9 +9,6 @@
       .field
         = f.label "비밀번호"
         = f.password_field :password, autocomplete: "new-password", placeholder: "#{@minimum_password_length}자 이상 입력해 주세요", class: "password"
-        - if @minimum_password_length
-          %em.passward-warn
-            (#{@minimum_password_length}자 이상 입력해 주세요)
       .field
         = f.label "비밀번호 확인", class: "new-password"
         = f.password_field :password_confirmation, autocomplete: "new-password"

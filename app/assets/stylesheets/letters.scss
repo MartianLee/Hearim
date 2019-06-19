@@ -13,6 +13,16 @@
             margin-bottom: 47px;
         }
     }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-family: NanumMyeongjo;
+        color: #f8f1e3 !important;
+    }
+    :-ms-input-placeholder {
+        color: #f8f1e3 !important;
+    }
+    ::-ms-input-placeholder {
+        color: #f8f1e3 !important;
+    }
 }
 
 .letter-cover {
