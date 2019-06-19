@@ -9,7 +9,7 @@ class TodaySentencesController < ApplicationController
     def create
         @today_sentences = TodaySentence.new(today_sentence_params)
         @today_sentences.save
-        redirect_to admin_path
+        redirect_to admini_path
     end
     def update
         @today_sentences.update(today_letter_params)

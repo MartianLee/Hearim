@@ -12,6 +12,8 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 gem 'cancancan'
+gem 'rolify'
+gem 'rails_admin', '~> 2.0.0.beta'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

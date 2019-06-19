@@ -1,7 +1,14 @@
 .navigation-bar
   .menu
-    = link_to image_tag("buttons/menu@3x.png", class: "btn-menu"), menu_path
+    = link_to image_tag("buttons/x@3x.png", class: "btn-menu-close"), :back if current_page?(menu_path)
+    = link_to image_tag("buttons/menu@3x.png", class: "btn-menu"), menu_path unless current_page?(menu_path)
   .refresh
-    = link_to image_tag("buttons/refresh@3x.png", class: "btn-refresh"), menu_path
+    = link_to image_tag("buttons/refresh@3x.png", class: "btn-refresh"), letters_path if current_page?(letters_path)
   .name
-    공개된 편지
+    = "공개된 편지" if current_page?(letters_path)
+    = "내게 편지쓰기" if current_page?(new_letter_path)
+    = "내게 쓴 편지함" if current_page?(my_letters_path)
+    = "저장한 편지" if current_page?(saved_letters_path)
+    = "오늘의 편지" if current_page?(today_letters_path)
+    = "정보" if current_page?(letters_path)
+    

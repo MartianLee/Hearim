@@ -17,6 +17,10 @@
     width: 28px;
 }
 
+.btn-menu-close {
+    width: 20px;
+}
+
 .btn-refresh {
     width: 19px;
 }
@@ -33,4 +37,12 @@
 .refresh {
     position: fixed;
     right: 33px;
+}
+
+.info {
+    margin-top: 80px;
+    a {
+        color: #9b9b9b !important;
+        font-size: 12px;
+    }
 }
