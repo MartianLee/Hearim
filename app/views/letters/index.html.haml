@@ -9,9 +9,9 @@
         .text
           = letter.body
         .from-me
-          2019년 6월 18일
+          = letter.created_at.strftime('%Y년 %m월 %d일')
           %br
-          %span.underline 나로부터
+          %span.naro.underline 나로부터
       .buttons
         - if current_user.present? and letter.likes.pluck(:user_id).include?(current_user.id)
           = link_to image_tag("buttons/liked@3x.png", class: "btn-like"), likes_path(letter: letter), method: :post , class: "btn"
@@ -24,7 +24,3 @@
         = link_to image_tag("buttons/delete@3x.png", class: "btn-delete"), letter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" if can? :edit, letter
         = link_to image_tag("buttons/share@3x.png", class: "btn-share"), '', class: "btn"
 
-%br
-
-= link_to 'New Letter', new_letter_path
-= link_to 'Home', root_path

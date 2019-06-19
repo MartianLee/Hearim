@@ -1,0 +1,11 @@
+.letters
+  - @letters.each do |letter|
+    .letter-cover
+      .box
+        = link_to letter, class: "letter-link" do
+          .body
+            .stamp
+            .date
+              = letter.created_at.strftime('%Y/%m/%d')
+            .text
+              = letter.body

@@ -1,28 +1,71 @@
-// Place all the styles related to the Letters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-td {
-    min-width: 30px;
-    word-break: break-all;
-}
+// letters.scss
 
 .letter {
+    margin-top: 10px;
     margin-bottom: 51px;
+    .body {
+        background-color: #494d82;
+        border-radius: 10px;
+        color: #f8f1e3;
+        padding: 50px 50px 50px 48px;
+        .text {
+            margin-top: 18px;
+            margin-bottom: 47px;
+        }
+    }
+}
+
+.letter-cover {
+    background-image: url(mail@3x.png);
+    background-size: cover;
+    width: 258px;
+    height: 174px;
+    margin: 0 auto 67px auto;
+    // padding: 0 26px 36px 36px;
+    .box {
+        background-color: #494d82;
+        width: 241px;
+        height: 155px;
+        position: absolute;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+    .body {
+        z-index: 10;
+        color: #f8f1e3;
+        margin: 20px 19px 36px 36px;
+        height: 96px;
+    }
+    .letter-link {
+        text-decoration: none;
+    }
+    .date {
+        margin-top: 31px;
+        font-size: 12px;
+    }
+    .stamp {
+        background-image: url(stamp@3x.png);
+        background-size: cover;
+        width: 26px;
+        height: 26px;
+        float: right;
+        margin-top: -11px;
+    }
+    .text {
+        margin-top: 24px;
+        margin-right: 16px;
+        line-height: 1.5em;
+        height: 3em;       /* height is 2x line-height, so two lines will display */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
 }
 
 .underline {
     text-decoration: underline;
-}
-
-.body {
-    background-color: #494d82;
-    border-radius: 10px;
-    color: #f8f1e3;
-    padding: 52px;
-    .text {
-        margin-top: 18px;
-        margin-bottom: 47px;
-    }
 }
 
 .img-wrapper {
@@ -30,7 +73,7 @@ td {
 }
 
 .img-letter-above {
-    width: 47px;
+    width: 55px;
     display: block;
     margin: 8px auto 38px auto;
 }
@@ -48,6 +91,21 @@ td {
   letter-spacing: normal;
   line-height: 1.79;
   text-align: justify;
+  textarea {
+    background-color: #494d82;
+    font-size: 14px;
+    line-height: 1.79;
+    font-family: NanumMyeongjo;
+    width: 100%;
+    color: #f8f1e3;
+    border: none;
+    text-align: justify;
+    white-space: normal;
+    &:focus { 
+        outline: none !important;
+        box-shadow: none;
+    }
+  }
 }
 
 .from-me {
@@ -57,6 +115,9 @@ td {
     letter-spacing: normal;
     text-align: right;
     color: #f8f1e3;
+    .naro {
+        margin-right: 3px;
+    }
 }
 
 a.btn {
@@ -87,4 +148,48 @@ a.btn {
             margin-left: 27.9px;
         }
     }
+}
+
+.btn-wrapper {
+    margin-top: 51px;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.today-to-me {
+    font-size: 14px;
+    text-align: center;
+    color: #494d82;
+    line-height: 2.86;
+}
+
+.today-text {
+    color: #494d82;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.39;
+}
+
+input[type=checkbox] {
+    &.open-checkbox {
+        display: none;
+    }
+}
+
+.open-checkbox label:before {
+    border-radius: 8px;
+}
+.checkbox .open-checkbox label:before {
+    border-radius: 3px;
+}
+
+input[type=checkbox]:checked {
+    content: "글 공개하기";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 15px;
 }

@@ -4,7 +4,7 @@ class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
   def index
-    @letters = Letter.all
+    @letters = Letter.all.order(created_at: :desc)
     @saved_letters = SavedLetter.find_by(id: current_user)
     @likes = Like.all.find_by(id: current_user)
     # @letters.each do |letter|
@@ -27,6 +27,11 @@ class LettersController < ApplicationController
   # GET /letters/new
   def new
     @letter = Letter.new
+    @letter.opened = true
+    @sentence = TodaySentence.find_by(day: DateTime.now.to_date.strftime('%Y-%m-%d'))
+    unless @sentence.present?
+      @sentnece = TodaySentence.order_by(:day).last
+    end
   end
 
   # GET /letters/1/edit
@@ -41,7 +46,7 @@ class LettersController < ApplicationController
 
     respond_to do |format|
       if @letter.save
-        format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
+        format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
         format.json { render :show, status: :created, location: @letter }
       else
         format.html { render :new }
@@ -55,13 +60,18 @@ class LettersController < ApplicationController
   def update
     respond_to do |format|
       if @letter.update(letter_params)
-        format.html { redirect_to @letter, notice: 'Letter was successfully updated.' }
+        format.html { redirect_to @letter, notice: '편지가 수성되었습니다.' }
         format.json { render :show, status: :ok, location: @letter }
       else
         format.html { render :edit }
         format.json { render json: @letter.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+
+  def my_letters
+    @letters = Letter.where(user_id: current_user).order(created_at: :desc)
   end
 
   # DELETE /letters/1
@@ -82,6 +92,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:body, :user_id)
+      params.require(:letter).permit(:body, :user_id, :opened)
     end
 end

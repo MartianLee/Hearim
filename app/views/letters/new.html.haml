@@ -1,5 +1,7 @@
-%h1 New letter
+.letter
+    
+    .today-to-me 오늘 나에게
+    .today-text.underline
+        = "“#{@sentence.body}”"
 
-= render 'form'
-
-= link_to 'Back', letters_path
+    = render 'form'

@@ -1,13 +1,25 @@
-= form_for @letter do |f|
-  - if @letter.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@letter.errors.count, "error")} prohibited this letter from being saved:"
-      %ul
-        - @letter.errors.full_messages.each do |message|
-          %li= message
-
-  .field
-    = f.label :body
-    = f.text_field :body
-  .actions
-    = f.submit 'Save'
+.letters
+  .letter
+    = form_for @letter do |f|
+      .body
+        .img-wrapper
+          = image_tag "buttons/group@3x.png", class: "img-letter-above"
+        .to-me.underline
+          To. 나에게
+        .text
+          .field
+          = f.text_area :body, rows: "3", autofocus: "true"
+        .from-me
+          2019년 6월 18일
+          %br
+          %span.underline 나로부터
+      .actions.btn-wrapper
+        = f.label :opened, "글 공개하기", class: "open-checkbox btn-submit-reverse"
+        = f.check_box :opened, class: "open-checkbox"
+        = f.submit '보내기', class: "btn-submit"
+      - if @letter.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@letter.errors.count, "error")} prohibited this letter from being saved:"
+          %ul
+            - @letter.errors.full_messages.each do |message|
+              %li= message

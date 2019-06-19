@@ -1,9 +1,27 @@
 %p#notice= notice
 
-%p
-  %b Body:
-  = @letter.body
-
-= link_to 'Edit', edit_letter_path(@letter)
-\|
-= link_to 'Back', letters_path
+.letters
+  - letter = @letter
+  .letter
+    .body
+      .img-wrapper
+        = image_tag "buttons/group@3x.png", class: "img-letter-above"
+      .to-me.underline
+        To. 나에게
+      .text
+        = letter.body
+      .from-me
+        2019년 6월 18일
+        %br
+        %span.underline 나로부터
+    .buttons
+      - if current_user.present? and letter.likes.pluck(:user_id).include?(current_user.id)
+        = link_to image_tag("buttons/liked@3x.png", class: "btn-like"), likes_path(letter: letter), method: :post , class: "btn"
+      - else
+        = link_to image_tag("buttons/fill-36@3x.png", class: "btn-like"), likes_path(letter: letter), method: :post , class: "btn"
+      - if current_user.present? and current_user.saved_letters.pluck(:letter_id).include?(letter.id)
+        = link_to image_tag("buttons/saved@3x.png", class: "btn-save"), saved_letters_path(letter: letter), method: :post, class: "btn"
+      - else
+        = link_to image_tag("buttons/fill-35@3x.png", class: "btn-save"), saved_letters_path(letter: letter), method: :post, class: "btn"
+      = link_to image_tag("buttons/delete@3x.png", class: "btn-delete"), letter, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" if can? :edit, letter
+      = link_to image_tag("buttons/share@3x.png", class: "btn-share"), '', class: "btn"
