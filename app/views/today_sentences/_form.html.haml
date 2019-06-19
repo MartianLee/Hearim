@@ -1,0 +1,16 @@
+= form_for @today_sentence do |f|
+  - if @today_sentence.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@today_sentence.errors.count, "error")} prohibited this today_sentence from being saved:"
+      %ul
+        - @today_sentence.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label "일자"
+    = f.date_field :day
+  .field
+    = f.label "오늘의 문장"
+    = f.text_area :body, rows: 4;
+  .actions
+    = f.submit 'Save'

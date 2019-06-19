@@ -1,0 +1,2 @@
+class TodaySentence < ApplicationRecord
+end

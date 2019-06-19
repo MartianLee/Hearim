@@ -1,22 +1,11 @@
-%h1 Listing letters
-
-%table
-  %thead
-    %tr
-      %th Body
-      %th 상세보기
-      %th User
-      %th Function
-
-  %tbody
-    - @saved_letters.each do |letter|
-      %tr
-        %td= letter.body
-        %td= link_to 'Show', letter
-        %td= current_user.email
-        %td= link_to 'Edit', edit_letter_path(letter)
-        %td= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } if can? :edit, letter
-
-%br
-
-= link_to 'Home', root_path
+.letters
+  - @saved_letters.each do |letter|
+    .letter-cover
+      .box
+        = link_to letter, class: "letter-link" do
+          .body
+            .stamp
+            .date
+              = letter.created_at.strftime('%Y/%m/%d')
+            .text
+              = letter.body

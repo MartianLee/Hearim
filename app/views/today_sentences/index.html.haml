@@ -1,0 +1,12 @@
+.letters
+  - @today_sentences.each do |sentence|
+    .letter
+      .body
+        .img-wrapper
+          = image_tag "buttons/group@3x.png", class: "img-letter-above"
+        .text
+          = sentence.body
+        .from-me
+          = sentence.day
+
+= link_to "관리자 페이지로", admin_path

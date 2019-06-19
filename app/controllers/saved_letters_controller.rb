@@ -1,6 +1,6 @@
 class SavedLettersController < ApplicationController
     def index
-        @saved_letters = Letter.where(id: current_user.saved_letters.all.pluck(:letter_id))
+        @saved_letters = Letter.where(id: current_user.saved_letters.all.pluck(:letter_id)).order(created_at: :desc)
     end
     def create
         saved = SavedLetter.find_by(user_id: current_user.id, letter_id: params[:letter])

@@ -1,14 +1,13 @@
-.conatiner
-    = yield
-    .menu-options
-        = link_to '내게 편지쓰기', new_letter_path if current_user.present?
-        = link_to '공개된 편지', letters_path
-        = link_to '내게 쓴 편지함', saved_letters_path if current_user.present?
-        = link_to '저장된 편지', saved_letters_path if current_user.present?
-        = link_to '오늘의 편지', today_letters_path
-        = link_to '정보', about_path
-        - if user_signed_in?
-            = link_to 'Sign out', destroy_user_session_path, method: :delete
-        - else
-            = link_to 'Sign in', new_user_session_path
-            = link_to 'Sign up', new_user_registration_path
+
+.menu-options
+    = link_to '내게 편지쓰기', new_letter_path if current_user.present?
+    = link_to '공개된 편지', letters_path
+    = link_to '내게 쓴 편지함', my_letters_path if current_user.present?
+    = link_to '저장한 편지', saved_letters_path if current_user.present?
+    = link_to '오늘의 편지', today_letters_path
+    = link_to '정보', about_path
+    - if user_signed_in?
+        = link_to '로그아웃', destroy_user_session_path, method: :delete
+    - else
+        = link_to '로그인', new_user_session_path
+        = link_to '회원가입', new_user_registration_path

@@ -29,7 +29,7 @@ body {
     margin: 117px 29px 29px 29px;
     @media screen and (min-width: 768px) {
         width: 600px;
-        margin: 0 auto;
+        margin: 117px auto 0 auto;
     }
 }
 
@@ -48,4 +48,83 @@ body {
         color: #494d82;
         margin-bottom: 9px
     }
+}
+
+.login {
+    font-family: NanumMyeongjo;
+    font-size: 14px;
+    .login-text {
+        color: #494d82;
+        text-align: center;
+    }
+
+    .user-input {
+        margin-top: 56px;
+        background-color: #494d82;
+        color: #f8f1e3;
+        padding: 35px 49px 35px 42px;
+        border-radius: 10px;
+
+        label {
+            display: inline-block;
+            width: 26%;
+            // max-width: 120px;
+        }
+        input {
+            display: inline-block;
+            font-size: 14px;
+            background-color: #494d82 !important;
+            width: 70%;
+            color: #f8f1e3;
+            border: none;
+            border-bottom: 0.9px solid #f8f1e3;
+            &:focus { 
+                outline: none !important;
+                box-shadow: none;
+            }
+            &:-internal-autofill-selected {
+                background-color: #494d82 !important;
+            }
+        }
+    }
+    .btn-wrapper {
+        text-align: right;
+        margin-right: 5px;
+        margin-top: 44px;
+    }
+    .btn-signup {
+        font-size: 14px;
+        font-weight: 800;
+        color: #494d82;
+    }
+}
+
+.btn-submit {
+    display: inline-block;
+    border-radius: 12px;
+    width: 71px;
+    height: 24px;
+    font-family: NanumMyeongjo;
+    border: solid 1px #494d82;
+    background-color: #f8f1e3;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    color: #494d82;
+    margin-left: 22px;
+}
+
+.btn-submit-reverse {
+    display: inline-block;
+    border-radius: 12px;
+    width: 97px;
+    height: 24px;
+    font-family: NanumMyeongjo;
+    border: solid 1px #494d82;
+    background-color: #f8f1e3;
+    color: #494d82;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    margin-left: 22px;
 }

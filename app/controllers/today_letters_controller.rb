@@ -1,10 +1,10 @@
 class TodayLettersController < ApplicationController
     def index
-        @today_letters = Letter.where(id: TodayLetter.all.pluck(:letter_id))
+        @today_letters = Letter.where(id: TodayLetter.all.pluck(:letter_id)).order(created_at: :desc)
     end
     def new
         @today_letter = TodayLetter.new
-        selected_date = Date.parse('2019-06-19')
+        selected_date = DateTime.now.to_date
         @today_letter.letter_id = Letter.where(:created_at => selected_date.beginning_of_day..selected_date.end_of_day).order(:like_count).last.id
     end
     def create
