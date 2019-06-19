@@ -59,7 +59,7 @@ body {
             display: inline-block;
             font-size: 14px;
             background-color: #494d82 !important;
-            width: 70%;
+            width: 68%;
             color: #f8f1e3;
             border: none;
             border-bottom: 0.9px solid #f8f1e3;
@@ -70,6 +70,15 @@ body {
             &:-internal-autofill-selected {
                 background-color: #494d82 !important;
             }
+            &::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #f8f1e3;
+            }
+        }
+        .passward-warn {
+            font-size: 11px;
+        }
+        .new-password {
+            font-size: 11px;
         }
     }
     .btn-wrapper {
