@@ -8,14 +8,14 @@
           To. 나에게
         .text
           .field
-          = f.text_area :body, rows: "1", autofocus: "true", placeholder: "50자 이상 입력해 주세요", class: "placeholder", minlength: 50
+          = f.text_area :body, rows: "1", autofocus: "true", placeholder: "50자 이상 입력해 주세요",id: "form-text" , class: "placeholder", minlength: 50, onkeydown: "autosize()"
         .from-me
           2019년 6월 18일
-          %br
+        .from-me
           %span.underline 나로부터
       .actions.btn-wrapper
-        = f.label :opened, "글 공개하기", class: "open-checkbox btn-submit-reverse"
         = f.check_box :opened, class: "open-checkbox"
+        = f.label :opened, "글 공개하기", class: "open-checkbox"
         = f.submit '보내기', class: "btn-submit"
       - if @letter.errors.any?
         #error_explanation

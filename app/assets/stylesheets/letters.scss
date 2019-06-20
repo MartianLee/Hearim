@@ -186,17 +186,30 @@ a.btn {
 
 input[type=checkbox] {
     &.open-checkbox {
-        display: none;
+        // display: none;
     }
 }
 
+.open-checkbox {
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: #f8f1e3;
+    color: #494d82;
+    font-size: 14px;
+    font-weight: 800;
+}
 .open-checkbox label:before {
     border-radius: 8px;
+    -webkit-appearance: none;
+    font-family: 'Nanum Myeongjo', serif;
+    border: solid 1px #494d82;
+    background-color: #f8f1e3;
+    color: #494d82;
+    font-size: 14px;
+    font-weight: 800;
 }
 .checkbox .open-checkbox label:before {
     border-radius: 3px;
 }
-
 input[type=checkbox]:checked {
     content: "글 공개하기";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);

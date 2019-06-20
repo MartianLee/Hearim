@@ -7,23 +7,9 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-//= require jquery_ujs
+require("main")
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    var textarea = document.querySelector('textarea');
 
-    textarea.addEventListener('keydown', autosize);
-                
-    function autosize(){
-    var el = this;
-    setTimeout(function(){
-        el.style.cssText = 'height:auto; padding:0';
-        // for box-sizing other than "content-box" use:
-        // el.style.cssText = '-moz-box-sizing:content-box';
-        el.style.cssText = 'height:' + el.scrollHeight + 'px';
-    },0);
-    }
-});
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
