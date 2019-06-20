@@ -1,0 +1,2 @@
+var x = $('#js-save-touch-<%= @letter.id %>'); 
+$('#js-save-touch-<%= @letter.id %>').replaceWith("<%= j render partial: 'saved_letters/button', locals: {letter: @letter} %>");

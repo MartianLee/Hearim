@@ -1,0 +1,2 @@
+var x = $('#js-like-touch-<%= @letter.id %>'); 
+$('#js-like-touch-<%= @letter.id %>').replaceWith("<%= j render partial: 'likes/button', locals: {letter: @letter} %>");
