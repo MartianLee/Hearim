@@ -2,7 +2,7 @@
 
 .letter {
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     .body {
         background-color: #494d82;
         border-radius: 10px;
@@ -157,7 +157,7 @@ a.btn {
         width: 24px;
     }
     .btn-share {
-        width: 22.8px;
+        width: 22px;
     }
     .btn {
         &:not(:first-child){
@@ -222,4 +222,27 @@ input[type=checkbox]:checked {
     color: #f3f3f3;
     text-align: center;
     line-height: 15px;
+}
+
+.message-copy {
+    margin: 17px auto 18px auto;
+    // position: absolute;
+    width: 168px;
+    padding: 2px;
+    border-radius: 12px;
+    border: solid 1px #494d82;
+    background-color: #494d82;
+    font-family: NanumMyeongjo;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    color: #f8f1e3;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;     
+    transition: opacity 1s; 
+}
+
+.message-copy.fade {
+    opacity:0;
 }
