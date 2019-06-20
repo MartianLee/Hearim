@@ -2,6 +2,10 @@ class LikesController < ApplicationController
     def index
     end
     def create
+        unless current_user.present?
+          redirect_to user_session_path
+          return
+        end
         liked = Like.find_by(user_id: current_user.id, letter_id: params[:letter])
         if liked.present?
           liked.destroy

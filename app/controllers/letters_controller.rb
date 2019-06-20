@@ -41,6 +41,10 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
+    unless current_user.present?
+      redirect_to user_session_path
+      return
+    end
     @letter = Letter.new(letter_params)
     @letter.user = current_user
 
