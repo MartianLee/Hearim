@@ -1,6 +1,6 @@
 .login
   %h2.login-text 회원가입
-  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), class: "new-user") do |f|
     = render "devise/shared/error_messages", resource: resource
     .user-input
       .field
@@ -8,11 +8,10 @@
         = f.email_field :email, autofocus: true, autocomplete: "email"
       .field
         = f.label "비밀번호"
-        = f.password_field :password, autocomplete: "new-password", placeholder: "#{@minimum_password_length}자 이상 입력해 주세요", class: "password"
+        = f.password_field :password, autocomplete: "new-password", placeholder: "#{@minimum_password_length}자 이상 입력", class: "password"
       .field
         = f.label "비밀번호 확인", class: "new-password"
         = f.password_field :password_confirmation, autocomplete: "new-password"
     .btn-wrapper
       .actions
-        = link_to "뒤로가기", menu_path, class: "btn-submit"
         = f.submit "회원가입", class: "btn-submit"

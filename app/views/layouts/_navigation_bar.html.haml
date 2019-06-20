@@ -1,7 +1,10 @@
 .navigation-bar
   .menu
     = link_to image_tag("buttons/x@3x.png", class: "btn-menu-close"), :back if current_page?(menu_path)
-    = link_to image_tag("buttons/menu@3x.png", class: "btn-menu"), menu_path unless current_page?(menu_path)
+    - if defined?(resource) and current_page?(new_user_registration_path(resource))
+      = link_to image_tag("buttons/x@3x.png", class: "btn-menu-close"), :back 
+    - else
+      = link_to image_tag("buttons/menu@3x.png", class: "btn-menu"), menu_path unless current_page?(menu_path)
   .refresh
     = link_to image_tag("buttons/refresh@3x.png", class: "btn-refresh"), letters_path if current_page?(letters_path)
     = link_to image_tag("buttons/back@3x.png", class: "btn-refresh"), :back if params[:id].present? and current_page?(letter_path)

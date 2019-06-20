@@ -47,8 +47,11 @@ body {
         color: #494d82;
         text-align: center;
     }
-    .field {
-        margin-bottom: 26px;
+    .login {
+        height: 69px;
+    }
+    .new-uesr {
+        height: 117px;
     }
     .user-input {
         margin-top: 56px;
@@ -56,17 +59,29 @@ body {
         color: #f8f1e3;
         padding: 35px 49px 35px 42px;
         border-radius: 10px;
+        .field {
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            &:not(:last-child){
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+            }
+        }
 
         label {
-            display: inline-block;
-            width: 26%;
+            width: 80px;
+            height: 16px;
             // max-width: 120px;
+            float: left;
         }
         input {
-            display: inline-block;
+            float: left;
+            -webkit-appearance: none;
+            border-radius: 0;
+            height: 16px;
             font-size: 14px;
             background-color: #494d82 !important;
-            width: 68%;
+            width: calc( 100% - 82px );
             color: #f8f1e3;
             border: none;
             border-bottom: 0.9px solid #f8f1e3;
@@ -112,9 +127,8 @@ body {
     -webkit-appearance: none;
     display: inline-block;
     border-radius: 12px;
-    width: 71px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    // width: 71px;
+    padding: 3px 16px;
     text-decoration: none;
     font-family: 'Nanum Myeongjo', serif;
     border: solid 1px #494d82;
