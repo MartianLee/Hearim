@@ -65,6 +65,7 @@
         margin-top: 24px;
         margin-right: 16px;
         line-height: 1.5em;
+        font-weight: bold;
         height: 3em;       /* height is 2x line-height, so two lines will display */
         overflow: hidden;
         text-overflow: ellipsis;
@@ -96,6 +97,9 @@
   text-align: justify;
   color: #f8f1e3;
   margin-left: 3px;
+  @media screen and (max-width: 768px) {
+    margin-left: 6px;
+  }
 }
 
 .text {
@@ -144,13 +148,13 @@ a.btn {
     margin-top: 27px;
 
     .btn-like {
-        width: 33px;
+        width: 32.1px;
     }
     .btn-save {
-        width: 24px;
+        width: 23.1px;
     }
     .btn-delete {
-        width: 32px;
+        width: 30px;
     }
     .btn-share {
         width: 28px;
@@ -172,6 +176,7 @@ a.btn {
     font-size: 14px;
     text-align: center;
     color: #494d82;
+    font-weight: 700;
     line-height: 2.86;
 }
 
