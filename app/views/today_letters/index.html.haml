@@ -9,7 +9,7 @@
         .text
           = letter.body
         .from-me
-          2019년 6월 18일
+          = letter.created_at.strftime('%Y년 %m월 %d일')
           %br
           %span.underline 나로부터
       .buttons
