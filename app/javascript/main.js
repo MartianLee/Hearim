@@ -29,16 +29,20 @@ window.copyLink = function(id) {
     // document.execCommand("Copy");
 
     // console.log("Copied the text: " + copyText.value);
-    var val = document.getElementById('js-url-' + id).value;
-    var t = document.createElement("textarea");
-    document.body.appendChild(t);
-    t.value = val;
-    t.select();
-    document.execCommand('copy');
-    document.body.removeChild(t);
+    // var val = document.getElementById('js-url-' + id).value;
+    // var t = document.createElement("textarea");
+    // document.body.appendChild(t);
+    // t.value = val;
+    // t.select();
+    // document.execCommand('copy');
+    // document.body.removeChild(t);
 
-    var message = '#js-copy-message-' + id;
-    $(message).css("opacity",1);
-    setTimeout(function(){ $(message).css("opacity",0); }, 1000);
+    // var copyText = document.getElementById('js-url-' + id);
+    // copyText.select();
+    // document.execCommand("Copy");
+
+    // var message = '#js-copy-message-' + id;
+    // $(message).css("opacity",1);
+    // setTimeout(function(){ $(message).css("opacity",0); }, 1000);
 
 }
