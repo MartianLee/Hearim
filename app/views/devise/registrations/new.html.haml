@@ -14,4 +14,5 @@
         = f.password_field :password_confirmation, autocomplete: "new-password"
     .btn-wrapper
       .actions
+        = link_to "뒤로가기", menu_path, class: "btn-submit"
         = f.submit "회원가입", class: "btn-submit"
