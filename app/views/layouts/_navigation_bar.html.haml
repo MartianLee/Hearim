@@ -4,6 +4,7 @@
     = link_to image_tag("buttons/menu@3x.png", class: "btn-menu"), menu_path unless current_page?(menu_path)
   .refresh
     = link_to image_tag("buttons/refresh@3x.png", class: "btn-refresh"), letters_path if current_page?(letters_path)
+    = link_to image_tag("buttons/back@3x.png", class: "btn-refresh"), :back if params[:id].present? and current_page?(letter_path)
   .name
     = "공개된 편지" if current_page?(letters_path)
     = "내게 편지쓰기" if current_page?(new_letter_path)
