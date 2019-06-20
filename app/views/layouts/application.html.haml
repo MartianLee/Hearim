@@ -2,15 +2,18 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Blog1
+    %title 헤아림
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag asset_path('favicon.png')
+    %meta{:name => 'description', :content => "나를 위해 쓰는 편지"}/
+    %meta{:name => 'keywords', :content => "편지, 나에게, 치유, 정신건강"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}/
+    %meta{:property => "og:image", :content => image_url("hearim.png") }
   %body
     = render "layouts/navigation_bar"
     .page-container

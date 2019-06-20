@@ -1,37 +1,40 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Blog1
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    = favicon_link_tag asset_path('favicon.png')
-    %meta{:charset => "utf-8"}/
-    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
-    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}/
-  %body
-    = render "layouts/navigation_bar"
-    .page-container
-      .letters
-        .letter
-          .body
-            .img-wrapper
-              = image_tag "buttons/group@3x.png", class: "img-letter-above"
-            .to-me.underline
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <title>헤아림</title>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+  </head>
+  <body>
+    <div class='page-container'>
+      <div class='letters'>
+        <div class='letter'>
+          <div class='body'>
+            <div class='img-wrapper'>
+            </div>
+            <div class='to-me underline'>
               To. 사용자께
-            .text
-              오류가 발생했습니다. 상단 오른쪽에 뒤로 가기 버튼을 누르면 다시 정상적으로 사이트를 이용하실 수 있습니다. 
-              %br
-              %br
-              오류나 건의사항이 있으시면, 저희 팀에게 이메일을 보내 주세요. 이메일 주소는 다음과 같습니다. 
-              %br
-              %br
+            </div>
+            <div class='text'>
+              오류가 발생했습니다. 상단 오른쪽에 뒤로 가기 버튼을 누르면 다시 정상적으로 사이트를 이용하실 수 있습니다.
+              <br>
+              <br>
+              오류나 건의사항이 있으시면, 저희 팀에게 이메일을 보내 주세요. 이메일 주소는 다음과 같습니다.
+              <br>
+              <br>
               martion@gmail.com
-              %br
+              <br>
               leejoonsoo95@naver.com
-            .from-me
-              = Datetime.now.strftime('%Y년 %m월 %d일')
-              %br
-              %span.naro.underline '헤아림' 팀으로부터
+            </div>
+            <div class='from-me'>
+              <br>
+              <span class='naro underline'>'헤아림' 팀으로부터</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
