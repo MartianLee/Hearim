@@ -9,5 +9,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :likes, dependent: :destroy
+  has_many :letters, dependent: :destroy, foreign_key: 'user_id'
   has_many :saved_letters, dependent: :destroy
 end

@@ -28,9 +28,9 @@ class LettersController < ApplicationController
   def new
     @letter = Letter.new
     @letter.opened = true
-    @sentence = TodaySentence.find_by(day: DateTime.now.to_date.strftime('%Y-%m-%d'))
-    unless @sentence.present?
-      @sentnece = TodaySentence.order_by(:day).last
+    @sentence = TodaySentence.find_by(day: DateTime.now.in_time_zone("Asia/Seoul").to_date.strftime('%Y-%m-%d'))
+    if @sentence.blank?
+      @sentence = TodaySentence.order(:day).last
     end
   end
 
