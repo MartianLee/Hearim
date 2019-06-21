@@ -36,7 +36,15 @@ body {
         letter-spacing: normal;
         text-align: justify;
         color: #494d82;
-        margin-bottom: 15px
+        margin-bottom: 21px
+    }
+}
+
+.info {
+    margin-top: 96px;
+    a {
+        color: #9b9b9b !important;
+        font-size: 12px;
     }
 }
 
@@ -73,6 +81,8 @@ body {
             height: 16px;
             // max-width: 120px;
             display: table-cell;
+            padding-top: 1px;
+            padding-bottom: 1px;
         }
         input {
             display: table-cell;
@@ -86,6 +96,7 @@ body {
             color: #f8f1e3;
             border: none;
             border-bottom: 0.9px solid #f8f1e3;
+            padding-bottom: 1px;
             &:focus { 
                 outline: none !important;
                 box-shadow: none;
@@ -98,7 +109,6 @@ body {
     input[type="password"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         font-family: 'Nanum Myeongjo', serif;
         color: #f8f1e3 !important;
-        padding-left: 5px;
     }
     :-ms-input-placeholder {
         color: #f8f1e3 !important;
