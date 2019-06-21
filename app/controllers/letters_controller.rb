@@ -4,7 +4,7 @@ class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
   def index
-    @letters = Letter.all.order(created_at: :desc)
+    @letters = Letter.all.where(opened: true).order(created_at: :desc)
     @saved_letters = SavedLetter.find_by(id: current_user)
     @likes = Like.all.find_by(id: current_user)
     # @letters.each do |letter|
