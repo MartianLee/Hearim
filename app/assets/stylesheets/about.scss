@@ -74,4 +74,20 @@
         } 
     }
 
+    .btn-letter {
+        margin: 131px auto 151px auto;
+        width: 146px;
+        background-color: #494d82;
+        border-radius: 12px;
+        padding: 4px 16px;
+        color: #f8f1e3;
+        font-size: 14px;
+        font-weight: 800;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #f8f1e3;
+        }
+    }
+
 }

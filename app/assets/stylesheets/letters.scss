@@ -158,10 +158,15 @@ a.btn {
     }
     .btn-share {
         width: 22px;
+        margin-left: 26.9px !important;
+        margin-right: 9px;
     }
     .btn {
         &:not(:first-child){
-            margin-left: 27.9px;
+            margin-left: 27px;
+        }
+        &:last-child{
+            margin-right: 7px;
         }
     }
 }
