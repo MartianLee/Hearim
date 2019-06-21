@@ -60,6 +60,7 @@ body {
         padding: 35px 49px 35px 42px;
         border-radius: 10px;
         .field {
+            width: 100%;
             margin-bottom: 14px;
             &:not(:last-child){
                 margin-bottom: 24px;
