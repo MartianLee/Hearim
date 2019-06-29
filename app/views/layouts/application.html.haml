@@ -8,11 +8,13 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag asset_path('favicon.png')
-    %meta{:name => 'description', :content => "‘헤아림’은 스스로에게 편지를 쓰는 서비스입니다. 세상 누구나 마음이 힘들고, 위로와 격려가 필요합니다. ‘헤아림’ 은 자신과 좋은 친구가 되는 것을 도와 드립니다."}/
+    %meta{:name => 'description', :content => "헤아림은 스스로에게 편지를 쓰는 서비스입니다. 세상 누구나 마음이 힘들고, 위로와 격려가 필요합니다. ‘헤아림’ 은 자신과 좋은 친구가 되는 것을 도와 드립니다."}/
     %meta{:name => 'keywords', :content => "편지, 나에게, 치유, 정신건강"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}/
+    %meta{:property => "og:title", :content => "헤아림 - 나를 위해 쓰는 편지" }
+    %meta{:property => "og:description", :content => "헤아림은 스스로에게 편지를 쓰는 서비스입니다. 세상 누구나 마음이 힘들고, 위로와 격려가 필요합니다. ‘헤아림’ 은 자신과 좋은 친구가 되는 것을 도와 드립니다." }
     %meta{:property => "og:image", :content => image_url("hearim.png") }
     / Naver 
     %meta{:name => "naver-site-verification", :content => "8c72b94136c7d4f2e7e07ce9f8307cbf10ca62a5"}
