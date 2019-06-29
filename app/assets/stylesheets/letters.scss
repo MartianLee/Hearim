@@ -23,6 +23,12 @@
     ::-ms-input-placeholder {
         color: #f8f1e3 !important;
     }
+
+    .btn-wrapper {
+        margin-top: 51px;
+        margin-right: 0;
+        text-align: right;
+    }
 }
 
 .letter-cover {
@@ -96,9 +102,9 @@
   letter-spacing: normal;
   text-align: justify;
   color: #f8f1e3;
-  margin-left: 2px;
+  margin-left: 1px;
   @media screen and (max-width: 768px) {
-    margin-left: 3px;
+    margin-left: 1px;
   }
 }
 
@@ -117,6 +123,7 @@
     text-align: justify;
     white-space: normal;
     resize: none;
+    padding: 0;
     &:focus { 
         outline: none !important;
         box-shadow: none;
@@ -132,7 +139,7 @@
     text-align: right;
     color: #f8f1e3;
     .naro {
-        margin-right: 3px;
+        margin-right: 1px;
     }
 }
 
@@ -169,12 +176,6 @@ a.btn {
             margin-right: 7px;
         }
     }
-}
-
-.btn-wrapper {
-    margin-top: 51px;
-    margin-right: 5px;
-    text-align: right;
 }
 
 .today-to-me {

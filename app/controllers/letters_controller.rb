@@ -73,7 +73,6 @@ class LettersController < ApplicationController
     end
   end
 
-
   def my_letters
     @letters = Letter.where(user_id: current_user).order(created_at: :desc)
   end
@@ -89,13 +88,14 @@ class LettersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_letter
-      @letter = Letter.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def letter_params
-      params.require(:letter).permit(:body, :user_id, :opened)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_letter
+    @letter = Letter.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def letter_params
+    params.require(:letter).permit(:body, :user_id, :opened)
+  end
 end

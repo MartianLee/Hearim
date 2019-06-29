@@ -8,7 +8,7 @@
           To. 나에게
         .text
           .field
-          = f.text_area :body, rows: "1", autofocus: "true", placeholder: "50자 이상 입력해 주세요",id: "form-text" , class: "placeholder", minlength: 50, onkeydown: "autosize()"
+          = f.text_area :body, rows: "1", autofocus: "true", placeholder: "50자 이상 입력해 주세요",id: "form-text" , class: "placeholder", minlength: 50, onkeydown: "autosize()", required: true
         .from-me
           = DateTime.now.to_date.strftime('%Y년 %m월 %d일')
         .from-me
