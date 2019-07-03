@@ -5,9 +5,9 @@
       = link_to image_tag("buttons/x@3x.png", class: "btn-menu-close"), :back 
     - else
       = link_to image_tag("buttons/menu@3x.png", class: "btn-menu"), menu_path unless current_page?(menu_path)
-  .refresh
-    = link_to '글쓰기', new_letter_path, class: "btn-new-letter" if current_page?(letters_path) or current_page?(root_path)
-    = link_to image_tag("buttons/back@3x.png", class: "btn-refresh"), :back if params[:id].present? and current_page?(letter_path)
+  -# .refresh
+  = link_to '글쓰기', new_letter_path, class: "refresh btn-new-letter" if current_page?(letters_path) or current_page?(root_path)
+  = link_to image_tag("buttons/back@3x.png", class: "refresh btn-refresh"), :back if params[:id].present? and current_page?(letter_path)
 
   .name
     = "공개된 편지" if current_page?(letters_path) or current_page?(root_path)
