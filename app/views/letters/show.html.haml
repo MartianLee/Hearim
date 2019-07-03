@@ -14,7 +14,6 @@
         %span.underline 나로부터
     .buttons
       = render partial: 'likes/button', locals: {letter: letter}
-      = letter.likes_count if letter.user == current_user
       = render partial: 'saved_letters/button', locals: {letter: letter}
       = link_to image_tag("buttons/delete@3x.png", class: "btn-delete"), letter, method: :delete, data: { confirm: '정말 지우시겠습니까?' }, class: "btn" if can? :edit, letter
       = image_tag "buttons/share@3x.png", class: "btn btn-share" , onClick: "copyLink('#{letter.id}')"

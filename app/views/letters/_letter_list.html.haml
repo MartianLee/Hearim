@@ -13,9 +13,9 @@
         %span.naro.underline 나로부터
     .buttons
       = render partial: 'likes/button', locals: {letter: letter}
-      = render partial: 'saved_letters/button', locals: {letter: letter}
+      -# = render partial: 'saved_letters/button', locals: {letter: letter}
       = link_to image_tag("buttons/delete@3x.png", class: "btn-delete"), letter, method: :delete, data: { confirm: '정말 지우시겠습니까?' }, class: "btn" if can? :edit, letter
-      = image_tag "buttons/share@3x.png", class: "btn btn-share" , onClick: "copyLink('#{letter.id}')"
+      -# = image_tag "buttons/share@3x.png", class: "btn btn-share" , onClick: "copyLink('#{letter.id}')"
       %input{id: 'js-url-' + letter.id.to_s, value: "#{request.host + letter_path(letter)}", style: "display:none"}
     .message-copy{id: 'js-copy-message-' + letter.id.to_s}
       글 주소가 복사되었습니다.
