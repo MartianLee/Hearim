@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/about', to: 'about#index'
   get '/info', to: 'about#info'
   get '/menu', to: 'timeline#index'
-  root 'about#index'
+  root 'letters#index'
   post '/likes', to: 'likes#create'
 
    # error pages

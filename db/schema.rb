@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_19_141528) do
+ActiveRecord::Schema.define(version: 2019_07_03_053418) do
 
   create_table "action_mailbox_inbound_emails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_141528) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.integer "like_count", default: 0
+    t.integer "likes_count", default: 0
     t.boolean "opened"
     t.index ["user_id"], name: "index_letters_on_user_id"
   end
