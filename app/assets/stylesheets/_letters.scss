@@ -4,9 +4,9 @@
     margin-top: 10px;
     margin-bottom: 30px;
     .body {
-        background-color: #494d82;
+        background-color: $brand-color;
         border-radius: 10px;
-        color: #f8f1e3;
+        color: $brand-background-color;
         padding: 50px 50px 50px 48px;
         .text {
             margin-top: 18px;
@@ -15,13 +15,13 @@
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         font-family: 'Nanum Myeongjo', serif;
-        color: #f8f1e3 !important;
+        color: $brand-background-color !important;
     }
     :-ms-input-placeholder {
-        color: #f8f1e3 !important;
+        color: $brand-background-color !important;
     }
     ::-ms-input-placeholder {
-        color: #f8f1e3 !important;
+        color: $brand-background-color !important;
     }
 
     .btn-wrapper {
@@ -37,9 +37,10 @@
     width: 258px;
     height: 174px;
     margin: 0 auto 67px auto;
+    opacity: 0.66;
     // padding: 0 26px 36px 36px;
     .box {
-        background-color: #494d82;
+        background-color: $brand-color;
         width: 241px;
         height: 155px;
         position: absolute;
@@ -48,7 +49,7 @@
     }
     .body {
         z-index: 10;
-        color: #f8f1e3;
+        color: $brand-background-color;
         margin: 20px 19px 36px 36px;
         height: 96px;
     }
@@ -101,7 +102,7 @@
   line-height: 1.93;
   letter-spacing: normal;
   text-align: justify;
-  color: #f8f1e3;
+  color: $brand-background-color;
   margin-left: 1px;
   @media screen and (max-width: 768px) {
     margin-left: 1px;
@@ -113,12 +114,12 @@
   line-height: 1.79;
   text-align: justify;
   textarea {
-    background-color: #494d82;
+    background-color: $brand-color;
     font-size: 14px;
     line-height: 1.79;
     font-family: 'Nanum Myeongjo', serif;
     width: 100%;
-    color: #f8f1e3;
+    color: $brand-background-color;
     border: none;
     text-align: justify;
     white-space: normal;
@@ -137,7 +138,7 @@
     line-height: 2.04;
     letter-spacing: normal;
     text-align: right;
-    color: #f8f1e3;
+    color: $brand-background-color;
     .naro {
         margin-right: 1px;
     }
@@ -181,13 +182,13 @@ a.btn {
 .today-to-me {
     font-size: 14px;
     text-align: center;
-    color: #494d82;
+    color: $brand-color;
     font-weight: 700;
     line-height: 1.79;
 }
 
 .today-text {
-    color: #494d82;
+    color: $brand-color;
     text-align: center;
     margin-bottom: 33px;
     font-size: 14px;
@@ -203,8 +204,8 @@ input[type=checkbox] {
 
 .open-checkbox {
     font-family: 'Nanum Myeongjo', serif;
-    background-color: #f8f1e3;
-    color: #494d82;
+    background-color: $brand-background-color;
+    color: $brand-color;
     font-size: 14px;
     font-weight: 800;
 }
@@ -212,9 +213,9 @@ input[type=checkbox] {
     border-radius: 8px;
     -webkit-appearance: none;
     font-family: 'Nanum Myeongjo', serif;
-    border: solid 1px #494d82;
-    background-color: #f8f1e3;
-    color: #494d82;
+    border: solid 1px $brand-color;
+    background-color: $brand-background-color;
+    color: $brand-color;
     font-size: 14px;
     font-weight: 800;
 }
@@ -236,13 +237,13 @@ input[type=checkbox]:checked {
     width: 168px;
     padding: 2px;
     border-radius: 12px;
-    border: solid 1px #494d82;
-    background-color: #494d82;
+    border: solid 1px $brand-color;
+    background-color: $brand-color;
     font-family: NanumMyeongjo;
     font-size: 12px;
     font-weight: 800;
     text-align: center;
-    color: #f8f1e3;
+    color: $brand-background-color;
     opacity: 0;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;     

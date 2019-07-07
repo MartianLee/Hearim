@@ -1,6 +1,6 @@
 .navigation-bar {
     padding: 28px 33px 21.5px 33px;
-    background-color: #f8f1e3;
+    background-color: $brand-background-color;
     z-index: 100;
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@
 }
 
 .btn-new-letter {
-    background-color: #494d82;
+    background-color: $brand-color;
     border-radius: 12px;
     padding: 3px 12px;
     text-decoration: none;
@@ -41,7 +41,7 @@
     font-family: 'Nanum Myeongjo', serif;
     font-size: 18px;
     font-weight: 800;
-    color: #494d82;
+    color: $brand-color;
 }
 
 .refresh {

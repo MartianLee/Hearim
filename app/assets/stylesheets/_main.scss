@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f8f1e3;
+    background-color: $brand-background-color;
     color: #333;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 14px;
@@ -35,7 +35,7 @@ body {
         font-stretch: normal;
         letter-spacing: normal;
         text-align: justify;
-        color: #494d82;
+        color: $brand-color;
         margin-bottom: 21px
     }
 }
@@ -52,7 +52,7 @@ body {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 14px;
     .login-text {
-        color: #494d82;
+        color: $brand-color;
         text-align: center;
     }
     .login {
@@ -63,8 +63,8 @@ body {
     }
     .user-input {
         margin-top: 56px;
-        background-color: #494d82;
-        color: #f8f1e3;
+        background-color: $brand-color;
+        color: $brand-background-color;
         padding: 35px 49px 35px 42px;
         border-radius: 10px;
         .field {
@@ -91,11 +91,11 @@ body {
             border-radius: 0;
             height: 16px;
             font-size: 14px;
-            background-color: #494d82 !important;
+            background-color: $brand-color !important;
             width: 100%;
-            color: #f8f1e3;
+            color: $brand-background-color;
             border: none;
-            border-bottom: 0.9px solid #f8f1e3;
+            border-bottom: 0.9px solid $brand-background-color;
             padding-bottom: 1px;
             padding: 1px 0 1px 0;
             &:focus { 
@@ -103,19 +103,19 @@ body {
                 box-shadow: none;
             }
             &:-internal-autofill-selected {
-                background-color: #494d82 !important;
+                background-color: $brand-color !important;
             }
         }
     }
     input[type="password"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         font-family: 'Nanum Myeongjo', serif;
-        color: #f8f1e3 !important;
+        color: $brand-background-color !important;
     }
     :-ms-input-placeholder {
-        color: #f8f1e3 !important;
+        color: $brand-background-color !important;
     }
     ::-ms-input-placeholder {
-        color: #f8f1e3 !important;
+        color: $brand-background-color !important;
     }
     .passward-warn {
         font-size: 11px;
@@ -131,7 +131,7 @@ body {
     .btn-signup {
         font-size: 14px;
         font-weight: 800;
-        color: #494d82;
+        color: $brand-color;
     }
 }
 
@@ -143,12 +143,12 @@ body {
     padding: 3px 16px;
     text-decoration: none;
     font-family: 'Nanum Myeongjo', serif;
-    border: solid 1px #494d82;
-    background-color: #f8f1e3;
+    border: solid 1px $brand-color;
+    background-color: $brand-background-color;
     font-size: 14px;
     font-weight: 800;
     text-align: center;
-    color: #494d82;
+    color: $brand-color;
     margin-left: 22px;
 }
 
@@ -159,9 +159,9 @@ body {
     width: 97px;
     height: 24px;
     font-family: 'Nanum Myeongjo', serif;
-    border: solid 1px #494d82;
-    background-color: #f8f1e3;
-    color: #494d82;
+    border: solid 1px $brand-color;
+    background-color: $brand-background-color;
+    color: $brand-color;
     font-size: 14px;
     font-weight: 800;
     text-align: center;
