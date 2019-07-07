@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class LettersController < ApplicationController
   before_action :set_letter, only: [:show, :edit, :update, :destroy]
 
@@ -41,12 +43,14 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
-    unless current_user.present?
-      redirect_to user_session_path
-      return
-    end
     @letter = Letter.new(letter_params)
-    @letter.user = current_user
+    if current_user.present?
+      @letter.user = current_user
+    else
+      email = Digest::SHA1.hexdigest(request.remote_ip + DateTime.now.to_s) + '@anonymous.com'
+      password = Digest::SHA1.hexdigest(request.remote_ip) + 'p'
+      @letter.user = User.new(email: email, password: password)
+    end
 
     respond_to do |format|
       if @letter.save
@@ -96,6 +100,6 @@ class LettersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def letter_params
-    params.require(:letter).permit(:body, :user_id, :opened)
+    params.require(:letter).permit(:body, :opened)
   end
 end
