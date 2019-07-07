@@ -14,7 +14,7 @@
         .from-me
           %span.underline 나로부터
       .actions.btn-wrapper
-        = f.check_box :opened, class: "open-checkbox"
+        -# = f.check_box :opened, class: "open-checkbox"
         = f.label :opened, "글 공개하기", class: "open-checkbox"
         = f.submit '보내기', class: "btn-submit"
       - if @letter.errors.any?
