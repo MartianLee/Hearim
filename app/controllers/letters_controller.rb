@@ -54,7 +54,7 @@ class LettersController < ApplicationController
 
     respond_to do |format|
       if @letter.save
-        format.html { redirect_to @letter, notice: '편지가 작성되었습니다.' }
+        format.html { redirect_to letters_path, notice: '편지가 작성되었습니다.' }
         format.json { render :show, status: :created, location: @letter }
       else
         format.html { render :new }
@@ -68,7 +68,7 @@ class LettersController < ApplicationController
   def update
     respond_to do |format|
       if @letter.update(letter_params)
-        format.html { redirect_to @letter, notice: '편지가 수성되었습니다.' }
+        format.html { redirect_to letters_path, notice: '편지가 수성되었습니다.' }
         format.json { render :show, status: :ok, location: @letter }
       else
         format.html { render :edit }
