@@ -8,5 +8,7 @@
           = sentence.body
         .from-me
           = sentence.day
+      .buttons
+        = link_to image_tag("buttons/delete@3x.png", class: "btn-delete"), sentence, method: :delete, data: { confirm: '정말 지우시겠습니까?' }, class: "btn"
 
 = link_to "관리자 페이지로", admini_path

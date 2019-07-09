@@ -24,6 +24,11 @@ class TodayLettersController < ApplicationController
         @today_letter.update(today_letter_params)
     end
     def destroy
+      @letter.destroy
+      respond_to do |format|
+        format.html { redirect_to letters_url, notice: 'Letter was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
 
     private
